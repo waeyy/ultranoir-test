@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ultranoir test technique</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+    </head>
+
+    <body>
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="col-md-6">
+              <button id="showList" type="button" class="btn btn-primary btn-block">Afficher la liste des médias</button>
+            </div>
+            <div class="col-md-6">
+              <button id="hideList" type="button" class="btn btn-default btn-block">Cacher la liste des médias</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" style="margin-top: 5px;">
+          <div class="col-md-12">
+            <div class="col-md-6">
+              <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#formModal">Ajouter un sous-titre à la série Mr Robot</button>
+            </div>
+
+            <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Choissisez le nouveau sous titre pour la série Mr Robot</h4>
+                  </div>
+
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-group">
+                        <label for="soustitre" class="control-label">Sous titre:</label>
+                        <input type="text" class="form-control" id="soustitre-input">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                    <button type="button" class="btn btn-primary" id="updateFiche" data-dismiss="modal">Appliquer le changement</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div id="dataList" class="grid">
+              <h1 class="text-center">Liste des médias</h1>
+
+              <table class="table table-bordered table-hover" id="table-data">
+                <tr>
+                  <th>Titre</th>
+                  <th>Accroche</th>
+                  <th>Description</th>
+                  <th>En ligne</th>
+                  <th>Priorite</th>
+                  <th>Sous titre</th>
+                  <th>Date de départ</th>
+                  <th>Date de fin</th>
+                  <th>Id fiche content</th>
+                  <th>Id fiche index</th>
+                  <th>Id langue</th>
+                  <th>Id rubrique</th>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <script src="js/script.js"></script>
+    </body>
+</html>
